@@ -1,6 +1,6 @@
 ---
 name: ai-image-sprite-pipeline
-description: "Use when generating UI assets (illustrations, sprites, icons, avatars) at scale using AI image generators like Gemini Nano Banana, DALL-E 3, Midjourney, or Stable Diffusion, when integrating AI-generated PNGs into a React / React Native component system, when AI outputs have inconsistent backgrounds / sizes / styles, or when scaling from 10 to 100+ assets without manual cleanup. Covers the 3-reference-image strategy for style consistency, Python+Pillow background removal pipeline, file structure for breed × pose matrix sprites, integration into enum-based component systems, and handling AI failure modes (style drift, refusal, deviation from prompt)."
+description: "Use when scaling AI-generated UI assets in a React / React Native project that LV or Claude Code can't generate themselves (avatars, sprite catalogs, themed icons), when integrating raw AI-generator outputs into a component enum system, or when asset volume exceeds manual cleanup capacity. Covers the 3-reference-image strategy, Python+Pillow post-processing, and enum-driven asset resolution."
 ---
 
 # AI Image Generation → Sprite Pipeline
@@ -159,7 +159,7 @@ For 196 sprites: ~1.2 GB raw → ~40 MB processed (97% reduction).
 
 ## File structure pattern
 
-For breed × pose matrix (e.g. SleepyCat's catalog):
+For breed × pose matrix (e.g. a Pokédex-style sprite catalog):
 
 ```
 project-root/

@@ -216,8 +216,8 @@ Repo: cozy-cat-naps
 ### Step 3: Mobile prompt (to Claude Code iOS)
 
 ```markdown
-請按照 SleepyCat/docs/feature-rooms-management.md 在 ios/ 實作。
-Repo: SleepyCat/ios (Expo)
+請按照 <project>/docs/feature-rooms-management.md 在 ios/ 實作。
+Repo: <project>/ios (Expo)
 
 ## 範圍
 1. app/(settings)/rooms.tsx (new) — RoomsScreen

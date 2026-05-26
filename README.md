@@ -1,7 +1,9 @@
 # Lovable + Claude Code Skills
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-standard-green.svg)](https://agentskills.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-standard-green.svg?style=for-the-badge)](https://agentskills.io)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-d97757.svg?style=for-the-badge)](https://claude.ai/code)
+[![GitHub stars](https://img.shields.io/github/stars/BradCrest/lovable-claude-code-skills?style=for-the-badge)](https://github.com/BradCrest/lovable-claude-code-skills/stargazers)
 
 Agent skills for teams who use **Lovable** as their visual / AI app builder
 and **Claude Code** (or Cursor / Codex / etc.) for deeper customization,
@@ -9,10 +11,10 @@ backend work, audits, and cross-platform expansion.
 
 If you've ever asked yourself:
 
-- 「Lovable 跟 Claude Code 一起用怎麼分工？」
+- "How do I split work between Lovable and Claude Code without stepping on each other?"
 - "My LV-generated app needs a feature LV can't do — now what?"
-- "How do I keep Web (LV-managed) and iOS (Expo) in sync when they share a Supabase backend?"
-- "Lovable pushed over my Claude Code changes — how do I prevent this?"
+- "How do I keep Web (LV-managed) and iOS (Expo) in sync when they share one Supabase backend?"
+- "Lovable's auto-commit pushed over my Claude Code changes — how do I prevent this?"
 
 ...this repo is for you.
 
@@ -27,6 +29,17 @@ Codex, Gemini, and 40+ others — read these and auto-apply them when the
 So if you install this repo, your AI pair programmer **automatically knows**
 the LV + Claude Code coordination patterns without you having to type them
 into every prompt.
+
+## When this WON'T help you
+
+Be honest — this repo is for a **specific intersection**:
+
+- ❌ **You don't use Lovable.** Most patterns assume LV as one of the two agents. If you only use Claude Code / Cursor / Codex, only ~2 skills (`supabase-edge-function-patterns`, `ai-image-sprite-pipeline`) are generally applicable.
+- ❌ **You don't use Supabase.** Edge Function patterns, RLS path checks, quota tables, JWT verification — all Supabase-specific. Firebase / Convex / PlanetScale users will need to translate.
+- ❌ **You ship on one platform only.** Half this repo is about Web + Mobile coordination. Single-platform teams won't need it.
+- ❌ **You want generic prompt engineering advice.** This is about a specific 2-tool workflow, not LLM tricks.
+
+If 2+ of those apply, you'll get more value from skills designed for your stack — star this repo if you're curious, but don't force-fit.
 
 ## Skills in this repo
 
@@ -51,13 +64,28 @@ into every prompt.
 |---|---|
 | [`supabase-edge-function-patterns`](skills/supabase-edge-function-patterns/) | Creating / modifying Supabase Edge Functions, error codes, daily quotas |
 | [`cross-platform-dual-prompt-conventions`](skills/cross-platform-dual-prompt-conventions/) | One Supabase backend, two clients (Web + RN/iOS), keeping them in sync |
-| [`ai-image-sprite-pipeline`](skills/ai-image-sprite-pipeline/) | Using Nano Banana / DALL-E / Midjourney to generate UI assets at scale |
+| [`ai-image-sprite-pipeline`](skills/ai-image-sprite-pipeline/) | Scaling AI-generated UI assets that LV / Claude Code can't generate themselves |
 
 ### Launch / App Store
 
 | Skill | When it triggers |
 |---|---|
 | [`expo-lovable-asc-launch-workflow`](skills/expo-lovable-asc-launch-workflow/) | Planning iOS App Store launch for an Expo app with companion Lovable web, 5-phase pipeline mapping which tool to use when, pre-launch checklist |
+
+## Bilingual prompts (English / 中文 / 日本語 / 한국어)
+
+Lovable's agent reads CJK languages well — Traditional Chinese, Simplified
+Chinese, Japanese, and Korean prompts trigger structurally identical behavior
+to English ones. Many real-world prompts in these skills use Chinese with
+English code identifiers mixed in:
+
+```markdown
+請按照 docs/feature-rooms.md 實作 RoomsScreen。
+不要動 schema。文案沿用 docs 內表格一字不差。
+```
+
+If you only ship in English, just translate the wrapper text — the structural
+patterns are language-agnostic.
 
 ## Install
 
@@ -121,9 +149,9 @@ Lovable builds the happy path fast. Claude Code does the things LV can't:
 
 PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The skills in this repo come from actual production experience shipping
-[SleepyCat](https://sleepin.cat) (a cat-sleep-tracking PWA + iOS app). When
-you have a war story from your LV → Claude Code workflow, please share.
+The skills in this repo come from actual production experience shipping a
+cat-sleep-tracking PWA + iOS app. When you have a war story from your LV
+→ Claude Code workflow, please share.
 
 ### Skill description writing tips
 
@@ -132,7 +160,7 @@ The `description` field decides whether your skill gets auto-triggered.
 reliably across agents):
 
 - ❌ `description: "Handles Lovable stuff"` — too vague, won't trigger
-- ✅ `description: "Use when LV's concurrent git push causes 'Updates were rejected' errors, when you need to recover after working on the same branch as LV, or when designing branch strategies to avoid race conditions with LV's auto-commits."` — specific, triggers on the right scenarios
+- ✅ `description: "Use when LV's concurrent git push causes 'Updates were rejected' errors, or when designing branch strategies to coexist with LV's auto-commits."` — specific scenarios, will trigger correctly
 
 ## License
 
@@ -161,5 +189,6 @@ When approaching iOS launch, install these alongside our `expo-lovable-asc-launc
 
 ## Author
 
-Built by [@BradCrest](https://github.com/BradCrest) while shipping SleepyCat.
-Many lessons learned the hard way — hopefully you don't have to.
+Built by [@BradCrest](https://github.com/BradCrest) while shipping a
+cross-platform cat-sleep-tracking app. Many lessons learned the hard way —
+hopefully you don't have to.

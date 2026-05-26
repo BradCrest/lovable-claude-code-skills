@@ -137,7 +137,7 @@ When implementing a "profile page + nav restructure" feature:
    ```
 3. Give Claude Code (iOS session) this prompt:
    ```
-   按照 SleepyCat/docs/feature-profile-and-nav.md 在 ios/ 實作。
+   按照 <project>/docs/feature-profile-and-nav.md 在 ios/ 實作。
    只當 client，不要動 backend。文案一字不差。
    ```
 4. Both AIs read the same source. Outputs align.

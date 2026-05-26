@@ -1,0 +1,37 @@
+{
+  "name": "BradCrest/lovable-claude-code-skills",
+  "version": "1.0.0",
+  "summary": "Agent skills for teams using Lovable + Claude Code together. Covers LV handoff, git race handling, dual-platform conventions, Supabase Edge Functions, scheduled audits via cloud routines, and AI sprite pipelines.",
+  "entrypoint": "README.md",
+  "docs": "README.md",
+  "private": false,
+  "skills": {
+    "lovable-handoff-prompts": {
+      "path": "skills/lovable-handoff-prompts/SKILL.md"
+    },
+    "lovable-git-race-handling": {
+      "path": "skills/lovable-git-race-handling/SKILL.md"
+    },
+    "lovable-feature-spec-pattern": {
+      "path": "skills/lovable-feature-spec-pattern/SKILL.md"
+    },
+    "lovable-vs-claude-code-allocation": {
+      "path": "skills/lovable-vs-claude-code-allocation/SKILL.md"
+    },
+    "claude-code-cloud-routines": {
+      "path": "skills/claude-code-cloud-routines/SKILL.md"
+    },
+    "supabase-edge-function-patterns": {
+      "path": "skills/supabase-edge-function-patterns/SKILL.md"
+    },
+    "cross-platform-dual-prompt-conventions": {
+      "path": "skills/cross-platform-dual-prompt-conventions/SKILL.md"
+    },
+    "ai-image-sprite-pipeline": {
+      "path": "skills/ai-image-sprite-pipeline/SKILL.md"
+    },
+    "expo-lovable-asc-launch-workflow": {
+      "path": "skills/expo-lovable-asc-launch-workflow/SKILL.md"
+    }
+  }
+}

@@ -26,7 +26,7 @@ app sharing the same backend.
 ```
 ┌──────────────────┐         ┌──────────────────┐
 │  Lovable (Web)   │         │  Expo (iOS)      │
-│  cozy-cat-naps   │         │  SleepyCat/ios   │
+│  <web-repo>      │         │  <ios-repo>      │
 └────────┬─────────┘         └────────┬─────────┘
          │                            │
          └──────────┬─────────────────┘
@@ -97,7 +97,7 @@ Key skills from that repo to install when ready:
 ### Recommended metadata folder structure
 
 ```
-SleepyCat/ios/metadata/
+<your-project>/ios/metadata/
 ├── en-US/
 │   ├── name.txt
 │   ├── subtitle.txt
@@ -187,8 +187,9 @@ asc release submit --app-id <id> --build-id <id>
 | Empty / broken app on first launch | Low | Always have onboarding / demo data |
 | Sign in with Apple absent when other social logins present | High | Add `expo-apple-authentication` |
 
-The **account deletion** requirement bites everyone. SleepyCat-style apps
-with Google OAuth must implement in-app account deletion, not just sign-out.
+The **account deletion** requirement bites everyone. Apps with Google
+OAuth or any social login must implement in-app account deletion, not
+just sign-out.
 
 ## Phase 5: Monitoring & ASO iteration
 

@@ -1,6 +1,6 @@
 ---
 name: lovable-handoff-prompts
-description: "Use when writing prompts to give to Lovable (lovable.dev) for app changes, when an existing LV-generated app needs new features, when LV is misinterpreting your intent, when handoff between you (or Claude Code) and LV needs to be clean, or when you need LV to follow project-specific conventions. Covers vocabulary that LV reads reliably vs misreads, structure for multi-task prompts, how to anchor LV to existing files / specs, when to break a big task into multiple LV prompts, and avoiding common LV failure modes like over-scoping or schema drift."
+description: "Use when writing prompts to give to Lovable (lovable.dev) for app changes, when LV is misinterpreting your intent, or when LV keeps scope-creeping or inventing files. Covers vocabulary that LV reads reliably vs misreads, anchoring LV to existing files / specs, the 4-section prompt structure, and avoiding common failure modes."
 ---
 
 # Lovable Handoff Prompts

@@ -1,6 +1,6 @@
 ---
 name: supabase-edge-function-patterns
-description: "Use when creating a new Supabase Edge Function, modifying an existing one, designing the client-side API contract (request shape, error codes, response normalization), implementing per-user daily quotas for AI / expensive operations, handling JWT verification with verify_jwt=true, or writing CORS preflight handling. Covers the standard structure, the normalized error code table (401/403/400/429/402/502/500), how to distinguish daily-limit-exceeded from upstream rate limits, the convention 'Edge Functions never write to DB' (clients persist response themselves), and quota table design."
+description: "Use when creating Supabase Edge Functions that handle AI calls, implementing per-user daily quota tables, distinguishing 'our daily limit' from 'upstream rate-limited' (both 429), or setting up JWT + CORS preflight. Covers the error code table, quota rollback on AI failure, RLS path checks, and why EFs should never write to DB."
 ---
 
 # Supabase Edge Function Patterns
@@ -11,8 +11,7 @@ A reusable template + convention set for Supabase Edge Functions that:
 - Need per-user daily quotas
 - Must give consistent error UX across clients
 
-Distilled from production patterns (SleepyCat's analyze-sleep-photo,
-stylize-cat, etc.).
+Distilled from production patterns shipping a cross-platform AI app.
 
 ## Contents
 

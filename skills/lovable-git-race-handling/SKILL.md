@@ -1,6 +1,6 @@
 ---
 name: lovable-git-race-handling
-description: "Use when working in a Lovable-managed repo where LV's concurrent auto-commits cause 'Updates were rejected because the remote contains work that you do not have locally' errors on git push, when local work conflicts with LV's parallel changes, when planning branch strategy to coexist with LV, or when recovering from LV overwriting Claude Code work. Covers `git pull --rebase` recovery, when amend is dangerous, branch naming, and how to detect LV mid-flight before you push."
+description: "Use when 'Updates were rejected' on git push in a Lovable-managed repo, when LV's concurrent auto-commits conflict with your local work, or when planning branch strategy to coexist with LV. Covers `git pull --rebase` recovery, why `--force` push is dangerous, and pre-flight `git fetch` checks."
 ---
 
 # Lovable Git Race Handling
@@ -142,9 +142,9 @@ The actual recovery was simple — rebase, fix import path, push.
 ### "git push --force erased the Friday LV changes"
 
 A teammate hit collision, panicked, ran `git push --force`. This erased
-about 6 LV commits worth of UI tweaks from Friday afternoon. LV's
-"history" tab in the dashboard still showed the prompts that triggered
-those commits, but the code was gone.
+about 6 LV commits worth of UI tweaks from Friday afternoon. LV's prompt
+history still showed the prompts that triggered those commits, but the
+code was gone.
 
 **Recovery**: had to re-submit each prompt to LV again. Lost ~2 hours.
 
