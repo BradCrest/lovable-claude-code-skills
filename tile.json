@@ -1,5 +1,5 @@
 {
-  "name": "BradCrest/lovable-claude-code-skills",
+  "name": "Brad-Cat/lovable-claude-code-skills",
   "version": "1.0.0",
   "summary": "Agent skills for teams using Lovable + Claude Code together. Covers LV handoff, git race handling, dual-platform conventions, Supabase Edge Functions, scheduled audits via cloud routines, and AI sprite pipelines.",
   "entrypoint": "README.md",

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-standard-green.svg?style=for-the-badge)](https://agentskills.io)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-d97757.svg?style=for-the-badge)](https://claude.ai/code)
-[![GitHub stars](https://img.shields.io/github/stars/BradCrest/lovable-claude-code-skills?style=for-the-badge)](https://github.com/BradCrest/lovable-claude-code-skills/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/Brad-Cat/lovable-claude-code-skills?style=for-the-badge)](https://github.com/Brad-Cat/lovable-claude-code-skills/stargazers)
 
 Agent skills for teams who use **Lovable** as their visual / AI app builder
 and **Claude Code** (or Cursor / Codex / etc.) for deeper customization,
@@ -92,13 +92,13 @@ patterns are language-agnostic.
 ### Recommended: any agent via [skills CLI](https://github.com/vercel-labs/skills)
 
 ```bash
-npx skills install BradCrest/lovable-claude-code-skills
+npx skills install Brad-Cat/lovable-claude-code-skills
 ```
 
 ### Claude Code (manual)
 
 ```bash
-git clone https://github.com/BradCrest/lovable-claude-code-skills.git \
+git clone https://github.com/Brad-Cat/lovable-claude-code-skills.git \
   ~/.claude/skills/lovable-claude-code
 ```
 
@@ -112,7 +112,7 @@ Add to your routine's `sources` array:
 {
   "sources": [
     {"git_repository": {"url": "https://github.com/yourorg/your-app"}},
-    {"git_repository": {"url": "https://github.com/BradCrest/lovable-claude-code-skills"}}
+    {"git_repository": {"url": "https://github.com/Brad-Cat/lovable-claude-code-skills"}}
   ]
 }
 ```
@@ -189,6 +189,6 @@ When approaching iOS launch, install these alongside our `expo-lovable-asc-launc
 
 ## Author
 
-Built by [@BradCrest](https://github.com/BradCrest) while shipping a
+Built by [@Brad-Cat](https://github.com/Brad-Cat) while shipping a
 cross-platform cat-sleep-tracking app. Many lessons learned the hard way —
 hopefully you don't have to.
